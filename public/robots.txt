@@ -1,0 +1,72 @@
+# -----------------------------------------------------------------------------
+# STANDARD SEARCH ENGINES & GENERAL ACCESS
+# -----------------------------------------------------------------------------
+User-agent: *
+Allow: /
+# Common security and admin exclusions
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /*.pdf$  # Optional: Blocks PDF files if you don't want them indexed
+
+# -----------------------------------------------------------------------------
+# LLM & AI CRAWLER BLOCKLIST (AI OPT-OUT)
+# -----------------------------------------------------------------------------
+
+# OpenAI (ChatGPT, GPT-4, DALL-E)
+# GPTBot is for training; ChatGPT-User is for live answers.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Google Gemini (formerly Bard) & Vertex AI
+# Blocks AI training but still allows Google Search indexing.
+User-agent: Google-Extended
+Disallow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Apple Intelligence
+# Blocks Apple's AI training bot but allows standard Apple Search.
+User-agent: Applebot-Extended
+Disallow: /
+
+# Common Crawl
+# Massive dataset used to train almost ALL open-source LLMs (Llama, etc.)
+User-agent: CCBot
+Disallow: /
+
+# Meta (Facebook/Instagram AI)
+User-agent: FacebookBot
+Disallow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Disallow: /
+
+# Microsoft / Bing AI specific
+# Note: Bing often uses "Bingbot" for both search and AI, but this targets AI specifically where possible.
+User-agent: Microsoft-Extended
+Disallow: /
+
+# -----------------------------------------------------------------------------
+# SITEMAP LOCATION
+# -----------------------------------------------------------------------------
+Sitemap: https://www.yourdomain.com/sitemap.xml
