@@ -69,4 +69,4 @@ Disallow: /
 # -----------------------------------------------------------------------------
 # SITEMAP LOCATION
 # -----------------------------------------------------------------------------
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://www.codyfingerson.com/sitemap.xml
